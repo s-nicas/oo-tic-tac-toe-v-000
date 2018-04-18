@@ -82,4 +82,31 @@ def won?
  end 
 end
 
+def full?
+ @board.all? do |position|
+   position == "X" || position == "O"
+ end
+end 
+
+
+def draw?
+  if full? && !won?
+    return true 
+  end  
+end  
+
+
+def over?
+  if full? || won? || draw?
+    return true
+  end 
+end 
+
+
+def winner
+  if won?
+    return [won?(board)[0]]
+  end
+end  
+
 end 
