@@ -29,7 +29,7 @@ def display_board
    return @index 
 end
 
-def move(board, index, player_character)
+def move( index, player_character)
   @board[@index]=player_character
   return @board 
 end 
