@@ -74,6 +74,12 @@ end
 
 def current_player
   turn_count % 2 == 0 ? "X" : "O"
-end  
+end 
+
+def won?
+  WIN_COMBINATIONS.detect do |win_combo|
+     @board[win_combo[0]] == @board[win_combo[1]] && @board[win_combo[2]] == @board[win_combo[1]] && position_taken?(win_combo[1]) 
+ end 
+end
 
 end 
