@@ -62,4 +62,20 @@ def turn
   end 
 end 
 
+def turn_count
+ count = 0 
+ @board.each do |turn| 
+   if turn == "X" || turn == "O"
+   count += 1 
+  end 
+ end 
+ 
+ return count 
+end
+
+
+def current_player
+  turn_count(@board) % 2 == 0 ? "X" : "O"
+end  
+
 end 
