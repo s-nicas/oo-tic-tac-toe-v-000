@@ -179,7 +179,7 @@ end
 def turn
   puts "Please enter 1-9:"
   users_input=gets.strip
-  input_to_index(users_input)
+  @index = input_to_index(users_input)
   
   if valid_move?
     move(current_player)
