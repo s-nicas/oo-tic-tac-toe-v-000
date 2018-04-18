@@ -15,7 +15,7 @@ WIN_COMBINATIONS = [
    [2,4,6]
    ]
    
-   def display_board 
+def display_board 
   puts " #{@board[0]} ""|"" #{@board[1]} ""|"" #{@board[2]} "
   puts "-----------"
   puts " #{@board[3]} ""|"" #{@board[4]} ""|"" #{@board[5]} "
@@ -24,10 +24,15 @@ WIN_COMBINATIONS = [
  end 
 
  def input_to_index(user_input)
- number = user_input.to_i
- index = number - 1 
- return index 
+   number = user_input.to_i
+   @index = number - 1 
+   return @index 
 end
+
+def move(board, index, player_character)
+  @board[@index]=player_character
+  return board 
+end 
 
 
 end 
