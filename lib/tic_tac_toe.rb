@@ -29,8 +29,8 @@ def display_board
    return index 
 end
 
-def move(input_to_index(user_input), player_character)
-  @board[input_to_index(user_input)]=player_character
+def move(index, player_character)
+  @board[index]=player_character
   return @board 
 end 
 
