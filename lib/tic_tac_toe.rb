@@ -31,7 +31,7 @@ end
 
 def move(board, index, player_character)
   @board[@index]=player_character
-  return board 
+  return @board 
 end 
 
 
