@@ -60,7 +60,6 @@ def turn
     display_board
   else turn
   end 
-  
 end 
 
 end 
